@@ -27,13 +27,13 @@ return {
   {
     "azratul/live-share.nvim",
     dependencies = { "jbyuki/instant.nvim" },
-    lazy = false, -- Force the plugin to load at startup
+    lazy = false, -- Force the plugin to load at startup, not having this was posing issues earlier. so keep it that way
     config = function()
-      vim.g.instant_username = "JJ" -- Replace with your username
+      vim.g.instant_username = "JJ" -- pls Replace with your username
       require("live-share").setup({
-        port_internal = 8765,       -- Local port for live share
+        port_internal = 8765,       -- Local port for live share (dont change it might break)
         max_attempts = 40,          -- Number of retries to get the service URL
-        service = "serveo.net",     -- Or "nokey@localhost.run"
+        service = "serveo.net",     -- Or "nokey@localhost.run" any works heheheha
       })
     end,
   },
