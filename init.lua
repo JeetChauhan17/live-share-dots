@@ -20,6 +20,7 @@ require("lazy").setup({
     cmd = { 'LiveServerStart', 'LiveServerStop' },
     config = true
   },
+
   {
     "azratul/live-share.nvim",
     dependencies = {
@@ -153,7 +154,7 @@ vim.api.nvim_set_keymap('n', '<C-S-Down>', ':resize +2<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-S-Left>', ':vertical resize -2<CR>', opts)
 -- Resize right
 vim.api.nvim_set_keymap('n', '<C-S-Right>', ':vertical resize +2<CR>', opts)
-vim.o.shell = "pwsh.exe"
+vim.o.shell = "/bin/bash"
 
 
 
